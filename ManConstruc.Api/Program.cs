@@ -13,7 +13,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Default") ?? "Data Source=manconstruc.db"));
 
 builder.Services.AddSingleton<TokenService>();
-builder.Services.AddHttpClient<GeminiPricingService>();
+builder.Services.AddHttpClient<DeepseekPricingService>();
+builder.Services.AddScoped<DeepseekPricingService>();
 
 builder.Services
     .AddControllers()

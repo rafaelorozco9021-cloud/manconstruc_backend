@@ -15,9 +15,9 @@ namespace ManConstruc.Api.Controllers;
 public class WorksController : ControllerBase
 {
     private readonly AppDbContext _db;
-    private readonly GeminiPricingService _aiPricing;
+    private readonly DeepseekPricingService _aiPricing;
 
-    public WorksController(AppDbContext db, GeminiPricingService aiPricing)
+    public WorksController(AppDbContext db, DeepseekPricingService aiPricing)
     {
         _db = db;
         _aiPricing = aiPricing;
